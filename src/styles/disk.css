@@ -1,0 +1,110 @@
+.disk {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    height: 80vh;
+}
+
+.diskMenu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+
+.disk_menu {
+    position: relative;
+    display: inline-block;
+}
+
+.disk_menu_item {
+    background-color: transparent;
+    border: 1px solid var(--mainColor);
+    border-radius: 10px;
+    color: var(--mainColor);
+    font-size: 16px;
+    padding: 5px 7px 5px 10px;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.disk_menu_content {
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: absolute;
+    background: white;
+    color: var(--mainColor);
+    padding: 5px 0 5px 0;
+    width: max-content;
+    font-size: 16px;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.disk_menu_item:hover {
+    background: #cccccc;
+}
+
+.disk_menu:hover .disk_menu_content {
+    display: flex;
+}
+
+.disk_menu_button {
+    border: 0;
+    min-width: 170px;
+    padding: 10px 20px 10px 20px;
+    background: white;
+    transition: all 0.25s;
+    text-align: start;
+}
+
+.disk_menu_button:hover {
+    background: #cccccc;
+}
+
+.files {
+    margin-top: 15px;
+    height: calc(80vh - 45px);
+    overflow-y: scroll;
+}
+
+.head_files {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 20px;
+    border-bottom: 1px solid var(--mainColor);
+    padding: 10px 10px 10px 0;
+    position: sticky;
+    top: 0;
+    background: white;
+}
+
+.head_files_name {
+    width: 480px
+}
+
+.head_files_date {
+    width: 190px;
+}
+
+.head_files_owner {
+    width: 210px;
+}
+
+.head_files_place {
+    width: 210px;
+}
+
+.head_files_button {
+    border: 0;
+    font-size: 22px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    visibility: hidden;
+}

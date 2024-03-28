@@ -1,0 +1,142 @@
+.loading {
+    height: 100vh;
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    animation: animL 0.5s 0.8s forwards;
+}
+
+.loader1 {
+    width: 40%;
+    height: 5px;
+    display: inline-block;
+    background: var(--link);
+    position: relative;
+    border-radius: 25px;
+}
+
+.loader1::after {
+    border-radius: 25px;
+    content: '';
+    width: 1%;
+    height: 5px;
+    background: var(--mainColor);
+    position: absolute;
+    animation: anim 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+@keyframes animL {
+    0% {}
+
+    100% {
+        display: none;
+    }
+}
+
+@keyframes anim {
+    0% {
+        width: 1%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.error {
+    height: 100vh;
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    animation: show 0.5s forwards;
+    font-size: 20px;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.to_sign_in {
+    color: var(--mainColor);
+    transition: all 0.25s;
+}
+
+.to_sign_in:hover {
+    color: var(--linkHover);
+}
+
+.preload {
+    animation: onload 0.25s forwards;
+}
+
+@keyframes onload {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.accountMain {
+    display: flex;
+    animation: load 0.25s 1.25s forwards;
+    padding: 10px 2% 20px 2%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: stretch;
+    gap: 30px;
+    opacity: 0;
+}
+
+@keyframes load {
+    0% {}
+
+    50% {
+        display: flex;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.left {
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.menuAccount {
+    border: 0;
+    padding: 5px 20px 5px 10px;
+    border-radius: 20px;
+    min-width: 200px;
+    font-size: 20px;
+    text-align: start;
+    background: white;
+}
+
+.menuAccount:hover {
+    background: var(--link);
+}
+
+.right {
+    flex-grow: 1;
+}

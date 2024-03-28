@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, input, button {
+    transition: background-color .5s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+:root {
+    --mainColor: #303030;
+    --link: #f1f1f1;
+    --linkHover: #9d9d9d;
+    --darkButtonHover: #4b4b4b;
+    --lightButtonHover: #d9d9d9;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--darkButtonHover);
+}
+
+#main {
+    transition: margin-left .5s;
+}
+
+.loader {
+    display: none;
+    border: 8px solid var(--linkHover);
+    border-radius: 50%;
+    border-top: 8px solid var(--darkButtonHover);
+    width: 80px;
+    height: 80px;
+    animation: spin 1.25s ease-in-out infinite;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.none {
+    display: none !important;
+}

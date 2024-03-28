@@ -1,0 +1,121 @@
+.file {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 20px;
+    border-bottom: 1px solid var(--mainColor);
+    padding-right: 10px;
+}
+
+.attempt_delete::after {
+    content: '';
+    width: 1%;
+    height: 42.4px;
+    opacity: .5;
+    background: red;
+    position: absolute;
+    animation: animFile 5s linear forwards;
+}
+
+@keyframes animFile {
+    0% {
+        width: 1%;
+    }
+
+    100% {
+        width: 80.4%;
+    }
+}
+
+.file:hover {
+    background: var(--link);
+}
+
+.file_name {
+    padding: 10px 0 10px 0;
+    width: 480px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file_date, .file_owner, .file_place {
+    padding: 10px 0 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file_date {
+    width: 190px;
+}
+
+.file_owner {
+    width: 210px;
+}
+
+.file_place {
+    width: 210px;
+}
+
+.file_button {
+    background: transparent;
+    border: 0;
+    font-size: 22px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.addition {
+    position: relative;
+    display: inline-block;
+}
+
+.file_button {
+    border: 0;
+    font-size: 22px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: all 0.25s;
+}
+
+.options {
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: absolute;
+    background: white;
+    right: 0;
+    color: var(--mainColor);
+    padding: 5px 0 5px 0;
+    width: max-content;
+    font-size: 16px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.file_button:hover {
+    background: #cccccc;
+}
+
+.addition:hover .options {
+    display: flex;
+}
+
+.option {
+    border: 0;
+    min-width: 170px;
+    padding: 10px 20px 10px 20px;
+    background: white;
+    transition: all 0.25s;
+    text-align: start;
+}
+
+.option:hover {
+    background: #cccccc;
+}

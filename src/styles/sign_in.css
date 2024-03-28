@@ -1,0 +1,136 @@
+.form_part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heads {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 5vh;
+}
+
+.head {
+    color: var(--linkHover);
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.checked {
+    color: var(--mainColor);
+    font-size: 30px;
+}
+
+.inner_part {
+    border: 3px solid var(--mainColor);
+    min-width: 300px;
+    margin-bottom: 5vh;
+}
+
+form {
+    display: none;
+    width: 30vw;
+    animation: show 0.5s forwards;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 30px;
+    min-width: 240px;
+}
+
+img {
+    width: 30px;
+}
+
+.input_block:first-child {
+    margin-top: 0;
+}
+
+.input_block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+    align-items: stretch;
+    border: 2px solid var(--linkHover);
+    transition: all 0.25s;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.input {
+    outline: 0;
+    padding: 5px 5px 5px 5px;
+    margin-left: 5px;
+    font-size: 18px;
+    border: 0;
+    flex-grow: 1;
+    border-left: 2px solid var(--linkHover);
+    background: transparent;
+    width: 100%;
+}
+
+.input_current {
+    border: 2px solid black;
+}
+
+.messageEmail, .messagePassword, .messageFirstname, .messageLastname, .messageEmailUp, .messagePasswordUp, .registration_message {
+    display: none;
+    margin-top: 10px;
+    color: red;
+    animation: show 0.5s forwards;
+}
+
+.log_in_message {
+    display: none;
+    margin-top: 10px;
+    color: red;
+    animation: show 0.5s forwards;
+}
+
+.sign_in, .sign_out {
+    background: var(--mainColor);
+    color: white;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    transition: all 0.25s;
+    box-shadow: 0 0 1px 1px var(--mainColor);
+    border: 2px solid var(--mainColor);
+}
+
+.sign_in:hover, .sign_out:hover {
+    border: 2px solid white;
+}
+
+.post_scriptum {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.post_scriptum button {
+    background: transparent;
+    color: black;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.post_scriptum button:hover {
+    text-decoration: underline;
+}
+
+@keyframes show {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
